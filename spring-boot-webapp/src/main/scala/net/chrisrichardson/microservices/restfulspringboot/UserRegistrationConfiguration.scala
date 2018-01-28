@@ -13,12 +13,14 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 import org.springframework.web.client.RestTemplate
 import org.springframework.cloud.sleuth.sampler.AlwaysSampler
 import org.springframework.cloud.sleuth.Sampler
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard
 
 import scala.collection.JavaConversions._
 
 @SpringBootApplication
 @Import(Array(classOf[EurekaClientConfiguration], classOf[NonEurekaClientConfiguration]))
 @EnableCircuitBreaker
+@EnableHystrixDashboard
 class UserRegistrationConfiguration {
 
 
