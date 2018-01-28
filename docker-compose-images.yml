@@ -1,5 +1,5 @@
 rabbitmq:
-  image: rabbitmq:3.5.3-management
+  image: i386/rabbitmq
   ports:
     - "5672:5672"
     - "15672:15672"
@@ -19,7 +19,7 @@ zipkin:
     RABBIT_HOST: rabbitmq
 
 mongodb:
-  image: mongo:3.0.4
+  image: strm/mongo-32bits
   ports:
     - "27017:27017"
   command: mongod --smallfiles
